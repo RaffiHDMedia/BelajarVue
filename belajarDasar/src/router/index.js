@@ -5,15 +5,41 @@ import Contact from '../views/ContactView.vue'
 import ApiView from '@/views/ApiView.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/aboutView', component: About },
-  { path: '/contactView', component: Contact },
-  { path: '/ApiView', component: ApiView },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+    meta: { title: 'Home - My Vue App' },
+  },
+  {
+    path: '/aboutView',
+    name: 'About',
+    component: About,
+    meta: { title: 'About - My Vue App' },
+  },
+  {
+    path: '/contactView',
+    name: 'Contact',
+    component: Contact,
+    meta: { title: 'Contact - My Vue App' },
+  },
+  {
+    path: '/apiview',
+    name: 'Api',
+    component: ApiView,
+    meta: { title: 'API - My Vue App' },
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes, //short for routes: routes
+})
+
+router.beforeEach((to, from, next) => {
+  console.log('Navigating to:', to.meta.title)
+  document.title = to.meta.title || 'Default Title'
+  next()
 })
 
 export default router

@@ -4,7 +4,7 @@
       <router-link to="/" class="navbar-brand text-light">Home</router-link>
       <router-link to="/aboutView" class="navbar-brand text-light">About</router-link>
       <router-link to="/contactView" class="navbar-brand text-light">Contact</router-link>
-      <router-link to="/ApiView" class="navbar-brand text-light">Contact</router-link>
+      <router-link to="/ApiView" class="navbar-brand text-light">Data API</router-link>
       <!-- <a routclass="navbar-brand text-light">Home</a> -->
     </div>
   </nav>

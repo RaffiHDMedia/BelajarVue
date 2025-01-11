@@ -1,5 +1,5 @@
 <script>
-import buttonItem from '../components/buttonItem.vue'
+import buttonItem from '@/components/ButtonItem.vue'
 import { ref } from 'vue'
 export default {
   components: {
