@@ -1,18 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router' //mengimport liblary router agar bisa menggganti ganti halaman
+import Home from '../views/HomeView.vue' // 2 sampai 5 adalah untuk mengimport halaman di folder views agar bisa diakses
 import About from '../views/AboutView.vue'
 import Contact from '../views/ContactView.vue'
 import ApiView from '@/views/ApiView.vue'
 
 const routes = [
+  // buat variabel routes dengan type array
   {
-    path: '/',
+    path: '/', // ini adalah halaman utama
     name: 'Home',
     component: Home,
     meta: { title: 'Home - My Vue App' },
   },
   {
-    path: '/aboutView',
+    path: '/aboutView', // ini adalah halaman abaut
     name: 'About',
     component: About,
     meta: { title: 'About - My Vue App' },
@@ -32,6 +33,7 @@ const routes = [
 ]
 
 const router = createRouter({
+  //
   history: createWebHistory(),
   routes, //short for routes: routes
 })
